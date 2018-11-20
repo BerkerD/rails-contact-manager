@@ -70,6 +70,12 @@ describe 'the person view', type: :feature do
       expect(page).to have_selector('li', text: 'abcd@gmail.com')
     end
   
+    it 'has a link to create email address' do
+      person.email_addresses.each do |email|
+        expect(page).to have_link('email', href: new_email_address_path(email))
+      end
+    
+    end
   
   end
 

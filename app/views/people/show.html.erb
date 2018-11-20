@@ -22,7 +22,7 @@
 
 <ul>
   <% @person.email_addresses.each do |email| %>
-    <li><%= email.address %> </li>
+    <li><%= email.address %> <%= link_to('email', new_email_address_path(email)) %> </li>
     <% end %>
 </ul>
 
