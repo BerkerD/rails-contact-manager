@@ -99,10 +99,7 @@ RSpec.describe PhoneNumbersController, type: :controller do
 
   describe "PUT #update" do
     context "with valid params" do
-      let(:new_attributes) {
-        {number: 'MyNewString', person_id: 1}
-      }
-
+     
       let(:bob) { Person.create(first_name: 'Bob', last_name: 'Jones') }
       let(:valid_attributes) { {number: '555-5678', person_id: bob.id} }
       let(:new_attributes) { {number: 'MyNewString', person_id: bob.id} }
